@@ -9,6 +9,11 @@ class Vendedor extends Pessoa {
     this.idade = idade;
   }
 
+  /**
+   * Este método altera o objetivo de vendas de todos os vendedores
+   * @param {number} objetivo Novo objetivo aopara os vendedores atingirem
+   * @returns {void}
+   */
   static alterarObjetivo(objetivo) {
     Vendedor.#objetivo = objetivo;
   }
@@ -18,10 +23,8 @@ class Vendedor extends Pessoa {
   }
 }
 
-const vendedor1 = new Vendedor('Astrogildo', 30);
-const vendedor2 = new Vendedor('Astolfo', 57);
-
-
+const vendedor1 = new Vendedor("Astrogildo", 30);
+const vendedor2 = new Vendedor("Astolfo", 57);
 
 console.log(vendedor1.nome, vendedor1.idade);
 console.log(vendedor2.nome, vendedor2.idade);
