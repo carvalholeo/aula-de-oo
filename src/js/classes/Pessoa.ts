@@ -6,11 +6,10 @@
  * @abstract
  */
 class Pessoa {
-  nome;
-  #idade;
-  endereco;
+  nome: string;
+  #idade: number;
+  // endereco: string;
   cpf;
-  #rg;
   #email = "teste@teste.com";
   telefone;
 
@@ -26,7 +25,7 @@ class Pessoa {
     return this.#email;
   }
 
-  setEmail(email) {
+  setEmail(email: string) {
     if (this instanceof Cliente) {
       this.#email = email;
     }
@@ -36,7 +35,7 @@ class Pessoa {
    * Retorna a idade da pessoa
    * @returns {number} Idade da pessoa
    */
-  getIdade() {
+  getIdade(): number {
     return this.#idade;
   }
 
@@ -44,19 +43,19 @@ class Pessoa {
    * Configura a idade do objeto pessoa.
    * @param {number} idade Idade da pessoa
    */
-  setIdade(idade) {
+  setIdade(idade: number) {
     this.#idade = idade;
   }
 
   /**
    * Incrementa a idade do objeto pessoa em 1
    */
-  fazerAniversario() {
+  fazerAniversario(): number {
     this.#idade = this.#idade + 1;
     return this.#idade;
   }
 
-  #alterarCpf(cpf) {
+  #alterarCpf(cpf: string) {
     this.cpf = cpf;
   }
 }
